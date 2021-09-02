@@ -2,9 +2,53 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-U1DAWAznBHeqEIlVSCgzq+c9gqGAJn5c/t99JyeKa9xxaYpSvHU5awsuZVVFIhvj" crossorigin="anonymous"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
+	<script src="http://code.jquery.com/jquery-1.9.1.js"></script>
     <title>Разумны кошык</title>
+	
 </head>
 <body>
-'Hello world'
+<div class="form-horizontal">
+<select class="form-select control-group"  aria-label="Default select example">
+  <option selected>Выберите продукт</option>
+  <option value="1">Мясо</option>
+  <option value="2">Сыр</option>
+  <option value="3">Яйца</option>
+</select>
+</div>
+
+<div class="form-horizontal">
+    <div class="control-group">
+        <label class="control-label" for="inputEmail">
+            Email</label>
+    </div>
+</div>
+
+<input type='button' value='Add Button' id='addButton' />
+<input type='button' value='Remove Button' id='removeButton' />
+
+
 </body>
+
+<script>
+ $(document).ready(function () {
+
+            $("#addButton").click(function () {
+                
+                var id = ($('.form-horizontal .control-group').length + 1).toString();
+                $('.form-horizontal').append('<select class="form-select control-group" id="control-group' + id + '"><option selected>Выберите продукт</option><option value="1'+id+'">Мясо</option></select>');
+            });
+
+
+            $("#removeButton").click(function () {
+                if ($('.form-horizontal .control-group').length == 1) {
+                    alert("No more textbox to remove");
+                    return false;
+                }
+
+                $(".form-horizontal .control-group:last").remove();
+            });
+        });
+</script>
 </html>
