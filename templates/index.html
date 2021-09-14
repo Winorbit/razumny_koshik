@@ -2,44 +2,105 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <title>Разумны кошык</title>
+
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-U1DAWAznBHeqEIlVSCgzq+c9gqGAJn5c/t99JyeKa9xxaYpSvHU5awsuZVVFIhvj" crossorigin="anonymous"></script>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
-	<script src="http://code.jquery.com/jquery-1.9.1.js"></script>
-    <title>Разумны кошык</title>
-	
-</head>
-<body>
-    <div class="form-horizontal">
-        <select class="form-select control-group"  aria-label="Default select example">
-          <option selected>Выберите продукт</option>
-          <option value="1">Мясо</option>
-          <option value="2">Сыр</option>
-          <option value="3">Яйца</option>
-        </select>
-    </div>
+    <script src="http://code.jquery.com/jquery-1.9.1.js"></script>
+    <script> $(document).ready(function () {
 
-    <input type='button' value='Add Button' id='addButton' />
-    <input type='button' value='Remove Button' id='removeButton' />
+             $("#addButton").click(function () {
 
-</body>
-
-<script>
- $(document).ready(function () {
-
-            $("#addButton").click(function () {
-                var id = ($('.form-horizontal .control-group').length + 1).toString();
-                $('.form-horizontal').append('<select class="form-select control-group" id="control-group' + id + '"><option selected>Выберите продукт</option><option value="1'+id+'">Мясо</option><option value="1'+id+'">Сыр</option><option value="1'+id+'">Яйца</option></select>');
+                const id = ($('.blablabla .control-group').length + 1).toString();
+                $('.blablabla').append('<div class="input-group lalala mb-3 row">' +
+                    '<div class="col">' +
+                    '<select class="form-select control-group" aria-label="Default select example" id="control-group' + id + '">' +
+                    '<option selected>Выберите продукт</option>' +
+                    '<option value="1'+id+'">Мясо</option>' +
+                    '<option value="1'+id+'">Сыр</option>' +
+                    '<option value="1'+id+'">Яйца</option>' +
+                    '<option value="1'+id+'"</option>"' +
+                    '</select>' +
+                    '</div>' +
+                    '<div class="col">' +
+                    '<input type="button" class="btn btn-primary col-lg-12" value="Удалить продукт" id="removeButton">' +
+                    '</div>' +
+                    '</div>');
             });
 
 
             $("#removeButton").click(function () {
-                if ($('.form-horizontal .control-group').length == 1) {
+                if ($('.blablabla .control-group').length === 1) {
                     alert("No more textbox to remove");
                     return false;
                 }
 
-                $(".form-horizontal .control-group:last").remove();
+                $(".blablabla .lalala:last").remove();
             });
         });
 </script>
+
+</head>
+<body>
+<div class="container justify-content-around">
+<div class="container justify-content-around blablabla">
+
+<div class="input-group lalala mb-3 row">
+  <div class="input-group-prepend col">
+    <h4><span class="badge bg-primary col-lg-12">Выберите продукты</span></h4>
+  </div>
+</div>
+
+<div class="input-group mb-3 row">
+  <div class="input-group-prepend col" >
+    <span class="input-group-text" id="basic-addon1">Ваш адрес:</span>
+  </div>
+  <div class="col">
+      <div>
+          <input type="text" class="form-control">
+      </div>
+</div>
+</div>
+
+<div class="input-group mb-3 row">
+    <div class="input-group-prepend col">
+        <span class="input-group-text" id="basic-addon2">Сумма:</span>
+    </div>
+    <div class="col">
+    <div>
+        <input type="text" class="form-control">
+    </div>
+    </div>
+</div>
+
+<div class="input-group mb-3 row">
+    <div class="col">
+        <select class="form-select control-group"  aria-label="Default select example">
+            <option selected>Выберите продукт</option>
+            <option value="1">Сежее Мясо</option>
+            <option value="2">Козий Сыр</option>
+            <option value="3">Стальные Яйца</option>
+        </select>
+    </div>
+
+    <div class="col">
+        <input type='button' class="btn btn-primary col-lg-12" value='Удалить продукт' id='removeButton'>
+    </div>
+</div>
+
+</div>
+    <div class="container justify-content-around">
+    <div class="input-group mb-3 row">
+    <div class="col">
+        <input type='button' class="btn btn-primary col-lg-12" value="Добавить позицию" id='addButton' />
+    </div>
+    <div class="col">
+        <input type="button" class="btn btn-primary col-lg-12" value="Расчитать" id="submit"/>
+    </div>
+</div>
+</div>
+    </div>
+
+</body>
+
 </html>
