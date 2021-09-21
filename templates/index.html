@@ -12,31 +12,41 @@
     <script src="http://code.jquery.com/jquery-1.9.1.js">
     </script>
 
-    <script> $(document).ready(function () {
-             $("#addButton").click(function () {
+    <script> 
+
+        function give_elem(id){
+            elem=
+                `<div class="input-group mb-3 row control-group">
+                    <div class="col">
+                        <select class="form-select" aria-label="Default select example" id="control-group${id}">
+                            <option selected>Выберите продукт</option>
+                            <option value="1${id}">Мясо</option>
+                            <option value="1${id}">Сыр</option>
+                            <option value="1${id}">Яйца</option>
+                        </select>
+                    </div>
+                    <div class="col">
+                        <input type="button" class="btn btn-primary col-lg-12" value="Удалить продукт" id="removeButton">
+                    </div>
+                </div>`
+            return elem
+        };        
+
+        $(document).ready(function () {
+            $("#addButton").click(function () {
                 const id = ($('.control-group').length + 1).toString();
-                $('.control-table').append('<div class="input-group mb-3 row control-group">' +
-                    '<div class="col">' +
-                    '<select class="form-select" aria-label="Default select example" id="control-group' + id + '">' +
-                    '<option selected>Выберите продукт</option>' +
-                    '<option value="1'+id+'">Мясо</option>' +
-                    '<option value="1'+id+'">Сыр</option>' +
-                    '<option value="1'+id+'">Яйца</option>' +
-                    '</select>' +
-                    '</div>' +
-                    '<div class="col">' +
-                    '<input type="button" class="btn btn-primary col-lg-12" value="Удалить продукт" id="removeButton">' +
-                    '</div>' +
-                    '</div>');
-            });
-             $("#removeButton").click(function () {
-                if ($('.control-group').length === 1) {
-                    alert("No more textbox to remove");
-                    return false;
-                }
-                $(".control-table .control-group:last").remove();
+                $('.control-table').append(give_elem(id));
             });
         });
+
+        $(document).on("click", "#removeButton", function(){
+            if ($('.control-group').length === 1) {
+                alert("Как минимум один продукт должен быть выбран");
+                return false;
+            }
+            $(this).parent().parent().remove();
+        });
+
     </script>
 </head>
 <body>
@@ -49,26 +59,26 @@
 
         <div class="input-group mb-3 row">
             <div class="input-group-prepend col" >
-                    <span class="input-group-text" id="basic-addon1">Ваш адрес:</span>
-                </div>
+                <span class="input-group-text" id="basic-addon1">Ваш адрес:</span>
+            </div>
 
             <div class="col">
                 <div>
-                        <input type="text" class="form-control">
-                    </div>
+                    <input type="text" class="form-control">
+                </div>
             </div>
         </div>
 
         <div class="input-group mb-3 row">
             <div class="input-group-prepend col">
-                    <span class="input-group-text" id="basic-addon2">Сумма:</span>
-                </div>
+                <span class="input-group-text" id="basic-addon2">Сумма:</span>
+            </div>
 
             <div class="col">
-                    <div>
-                        <input type="text" class="form-control">
-                    </div>
+                <div>
+                    <input type="text" class="form-control">
                 </div>
+            </div>
         </div>
     </div>
 
@@ -102,5 +112,6 @@
             </div>
         </div>
     </div>
+    
 </body>
 </html>
