@@ -14,59 +14,28 @@
                 <h4>Результат расчета</h4>
             </div>
 
+            {% for  product in products %}
+
             <div class=" mb-3 row ">
                 <div class="col col-lg-4">
-                    Фарш крестьянский
+                    {{product.name}}
                 </div>
 
                 <div class="col col-lg-5">
-                    Гиппо  ул Рокосовского
+                    {{product.address}}
                 </div>
 
                 <div class="col col-lg-2">
-                    10р
+                    {{product.price}}
                 </div>
 
                 <div class="col col-lg-1">
                     -
                 </div>
             </div>
+            {% endfor %}
 
-            <div class=" mb-3 row ">
-                <div class="col col-lg-4">
-                    Фарш крестьянский
-                </div>
-
-                <div class="col col-lg-5">
-                    Гиппо  ул Рокосовского
-                </div>
-
-                <div class="col col-lg-2">
-                    10р
-                </div>
-
-                <div class="col col-lg-1">
-                    -
-                </div>
-            </div>
-
-            <div class=" mb-3 row ">
-                <div class="col col-lg-4">
-                    Фарш крестьянский
-                </div>
-
-                <div class="col col-lg-5">
-                    Гиппо  ул Рокосовского
-                </div>
-
-                <div class="col col-lg-2">
-                    10р
-                </div>
-
-                <div class="col col-lg-1">
-                    -
-                </div>
-            </div>
+           
         </div>
 
         <div class=" mb-3 mt-5 row justify-content-start ">
