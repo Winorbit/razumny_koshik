@@ -19,11 +19,11 @@
             elem=
                 `<div class="input-group mb-3 row control-group">
                     <div class="col">
-                        <select class="form-select" aria-label="Default select example" id="control-group${id}">
+                        <select class="form-select" name="category" id="control-group${id}">
                             <option selected>Выберите продукт</option>
-                            <option value="1${id}">Мясо</option>
-                            <option value="1${id}">Сыр</option>
-                            <option value="1${id}">Яйца</option>
+                            <option value="meat">Мясо</option>
+                            <option value="cheese">Сыр</option>
+                            <option value="eggs">Яйца</option>
                         </select>
                     </div>
                     <div class="col">
@@ -51,68 +51,67 @@
     </script>
 </head>
 <body>
-    <div class="container justify-content-around">
-        <div class="input-group mb-3 row">
-            <div class="input-group-prepend col">
-                <h4><span class="badge bg-primary col-lg-12">Выберите продукты</span></h4>
-            </div>
-        </div>
-
-        <div class="input-group mb-3 row">
-            <div class="input-group-prepend col" >
-                <span class="input-group-text" id="basic-addon1">Ваш адрес:</span>
+    <form action="" method="POST">    
+        <div class="container justify-content-around">
+            <div class="input-group mb-3 row">
+                <div class="input-group-prepend col">
+                    <h4><span class="badge bg-primary col-lg-12">Выберите продукты</span></h4>
+                </div>
             </div>
 
-            <div class="col">
-                <div>
-                    <input type="text" class="form-control">
+            <div class="input-group mb-3 row">
+                <div class="input-group-prepend col" >
+                    <span class="input-group-text" id="basic-addon1">Ваш адрес:</span>
+                </div>
+
+                <div class="col">
+                    <div>
+                        <input type="text" class="form-control" name = "address">
+                    </div>
+                </div>
+            </div>
+
+            <div class="input-group mb-3 row">
+                <div class="input-group-prepend col">
+                    <span class="input-group-text" id="basic-addon2 ">Сумма:</span>
+                </div>
+
+                <div class="col">
+                    <div>
+                        <input type="text" class="form-control" name = "money">
+                    </div>
                 </div>
             </div>
         </div>
 
-        <div class="input-group mb-3 row">
-            <div class="input-group-prepend col">
-                <span class="input-group-text" id="basic-addon2">Сумма:</span>
-            </div>
+        <div class="container justify-content-around control-table">
+            <div class="input-group mb-3 row control-group">
+                <div class="col">
+                    <select class="form-select"  name="category" id="control-group1">
+                        <option selected>Выберите продукт</option>
+                        <option value="meat">Мясо</option>
+                        <option value="cheese">Сыр</option>
+                        <option value="eggs">Яйца</option>
+                    </select>
+                </div>
 
-            <div class="col">
-                <div>
-                    <input type="text" class="form-control">
+                <div class="col">
+                    <input type='button' class="btn btn-primary col-lg-12" value='Удалить продукт' id='removeButton'>
                 </div>
             </div>
         </div>
-    </div>
 
-    <div class="container justify-content-around control-table">
-        <div class="input-group mb-3 row control-group">
-            <div class="col">
-                <select class="form-select"  aria-label="Default select example" id="control-group1">
-                    <option selected>Выберите продукт</option>
-                    <option value="1">Мясо</option>
-                    <option value="2">Сыр</option>
-                    <option value="3">Яйца</option>
-                </select>
-            </div>
+        <div class="container justify-content-around">
+            <div class="input-group mb-3 row">
+                <div class="col">
+                    <input type='button' class="btn btn-primary col-lg-12" value="Добавить позицию" id='addButton'>
+                </div>
 
-            <div class="col">
-                <input type='button' class="btn btn-primary col-lg-12" value='Удалить продукт' id='removeButton'>
-            </div>
-        </div>
-    </div>
-
-    <div class="container justify-content-around">
-        <div class="input-group mb-3 row">
-            <div class="col">
-                <input type='button' class="btn btn-primary col-lg-12" value="Добавить позицию" id='addButton'>
-            </div>
-
-            <div class="col">
-                <form action="" method="POST">
+                <div class="col">
                     <input type="submit" class="btn btn-primary col-lg-12" value="Расчитать" id="submit">
-                </form>
+                </div>
             </div>
         </div>
-    </div>
-    
+    </form>   
 </body>
 </html>
