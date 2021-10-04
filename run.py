@@ -4,7 +4,7 @@ from settings import products
 
 app = Flask(__name__, template_folder="templates")
 
-def take_user_input(resuest):
+def take_user_input(request):
     address = request.form.get("address")
     money = request.form.get("money")
     categories = request.form.getlist("category")
