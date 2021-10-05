@@ -14,7 +14,6 @@
             <div class="d-flex justify-content-around mb-5">
                 <h4>Результат расчета</h4>
             </div>
-
             {% for  product in products %}
 
             <div class=" mb-3 row ">
@@ -29,7 +28,6 @@
                 <div class="col col-lg-2">
                     {{product.price}}
                 </div>
-
                 <div class="col col-lg-1">
                     -
                 </div>
@@ -40,17 +38,23 @@
         </div>
 
         <div class=" mb-3 mt-5 row justify-content-start ">
+
+                <div class="col-2 ">
+                    <h3><a href="/" class="btn btn-primary">На главную</a></h3>
+                </div>
+
                 <div class="col-2">
-                   Итого 8 р
+                    <button type="button" class="btn btn-primary">Скачать таблицу</button>
                 </div>
 
                 <div class="col-2 ">
-                    Скачать таблицу
+                    <button type="button" class="btn btn-primary">Послать в телеграм</button>
                 </div>
 
-                <div class="col-2 ">
-                    Послать в телеграмм
+                <div class="col-2">
+                    <h3><span class="btn btn-primary"> Итого 999 р </span></h3>
                 </div>
+
         </div>
 
         <div>
