@@ -1,6 +1,6 @@
 import os
 from flask import Flask, render_template, request, send_from_directory
-from settings import products
+import json
 
 app = Flask(__name__, template_folder="templates")
 
@@ -8,7 +8,9 @@ app = Flask(__name__, template_folder="templates")
 @app.route("/", methods=["get", "post"])
 def show_pages():
     if request.method == 'POST':
-        return render_template('result.html', products=products)
+        with open('settings.json', encoding="utf8") as json_file:
+            data = json.load(json_file)
+        return render_template('result.html', products=data['products'])
     else:
         return render_template('index.html')
 
