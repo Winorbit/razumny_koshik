@@ -1,0 +1,114 @@
+{"products" : {
+			"meat_raw_pork":[
+								{"name":"тазобедренная часть",
+								"shop_name": "Корона",
+								"address":"Рокосовского 5",
+								"price_of_unit":12},
+
+								{"name":"лопаточная часть",
+								"shop_name": "Виталюр",
+								"address":"Дзержинского 21",
+								"price_of_unit":13},
+
+								{"name":"вторая сниниа с мин ценой",
+								"shop_name": "Магазин",
+								"address":"Где-то находиться",
+								"price_of_unit":12},
+
+								{"name":"шея",
+								"shop_name": "Корона",
+								"address":"Рокосовского 5",
+								"price_of_unit":16}
+							],
+			"meat_raw_beaf":[
+								{"name":"стейк рибай",
+								"shop_name": "Green",
+								"address":"каменногорская 55",
+								"price_of_unit": 32},
+
+								{"name":"говязина для отбивных",
+								"shop_name": "Корона",
+								"address":"Рокосовского 5",
+								"price_of_unit":25}
+							],
+
+			"meat_raw_bird":[
+								{"name":"крылья куриные",
+								"shop_name": "Green",
+								"address":"Каменногорская 55",
+								"price_of_unit": 6},
+
+								{"name":"бедра куриные",
+								"shop_name": "Корона",
+								"address":"Корона рокосовского 5",
+								"price_of_unit": 5.5},
+
+								{"name":"стейк из индейки",
+								"shop_name": "Корона",
+								"address":"Корона рокосовского 5",
+								"price_of_unit": 5.5}
+							],
+						 	
+			"meat_sausages": [
+								{"name":" Колбаса копченая юбилейная",
+								"shop_name": "Green",
+								"address":"Каменногорская 55",
+								"price_of_unit": 14.76},
+
+								{"name":"Колбаса вареная советская",
+								"shop_name": "Корона",
+								"address":"Рокосовского 5",
+								"price_of_unit": 15.53},
+
+								{"name":"Колбаские свиные домашние",
+								"shop_name": "Корона",
+								"address":"Рокосовского 5",
+								"price_of_unit": 7.86},
+
+								{"name":"Сосиски типа мясные",
+								"shop_name": "Санта",
+								"address":" Сантовкая 38",
+								"price_of_unit": 6.54}
+							],
+
+			"cheese":[
+							{"name":"Сыр Полесский",
+							"shop_name": "Корона",
+							"address":"Рокосовского 5",
+							"price_of_unit": 14.86},
+
+							{"name":"Сыр Российский",
+							"shop_name": " Виталюр",
+							"address":"Дзержинского 75",
+							"price_of_unit": 14.87},
+
+							{"name":"Сыр Бри",
+							"shop_name": "Простор",
+							"address":"Дзержинского",
+							"price_of_unit": 20.54}
+
+						],
+
+			"eggs":[
+							{"name":"Яйцо куриное С-1",
+							"shop_name": "Простор",
+							"address":"Дзержинского",
+							"price_of_unit": 3.00},
+
+							{"name":"Яйцо куриное С-2",
+							"shop_name": "Простор",
+							"address":"Дзержинского",
+							"price_of_unit": 2.88},
+
+							{"name":"Яйцо куриное С-1",
+							"shop_name": "Корона",
+							"address":"Рокосовского 5",
+							"price_of_unit": 3.01},
+
+							{"name":"Яйцо куриное С-2",
+							"shop_name": "Корона",
+							"address":"Рокосовского 23",
+							"price_of_unit": 2.87}
+					] 
+		}
+}
