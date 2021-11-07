@@ -8,6 +8,7 @@ f.close()
 """
 
 def select_cheepest_product(products):
+	print(products)
 	min_price = min(i.get("price_of_unit") for i in products)
 	cheepest_product = [i for i in products if i.get("price_of_unit") == min_price]
 	return cheepest_product
@@ -21,11 +22,12 @@ def select_all_cheepest_product_by_categories(categories):
 	all_cheepest_products = {}
 
 	for category in categories:
+		print(category, "category")
 		cheepest_products_in_category = select_cheepest_product(products.get(category))
 		all_cheepest_products[category] = cheepest_products_in_category
 	return all_cheepest_products
 
 """
-categories = ["meat_raw_pork", "eggs", "cheese"]
-print(select_all_cheepest_product_by_categiries(categories))
+categories = ["cheese"]
+print(select_all_cheepest_product_by_categories(categories))
 """

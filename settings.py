@@ -32,5 +32,5 @@ product_category = {"meat_raw_pork": "Мясо сырое.Свинина",
                     "meat_raw_bird": "Мясо сырое. Птица",
                     "meat_sausages": "Мясо. Колбасно-сосисочные изделия",
                     "eggs":"Яйца",
-                    "сheese":"Сыр"                    
+                    "cheese":"Сыр"                    
                     }
