@@ -1,4 +1,5 @@
 import json
+from settings import url_data_products
 
 """
 f = open("products/products_one_key.json")
@@ -12,7 +13,7 @@ def select_cheepest_product(products):
 	return cheepest_product
 
 def select_all_cheepest_product_by_categiries(categories):
-	f = open("products/products_one_key.json")
+	f = open(url_data_products)
 	data = json.load(f)
 	products = data.get("products") 
 	f.close()

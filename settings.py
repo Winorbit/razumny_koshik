@@ -1,17 +1,28 @@
-products = [
-    {"name": "Крылья куриные сырые",
-     "address": "Корона Игуменский тракт",
-     "price": "4,5р"},
+products = {
+    "meat_raw_bird": [{"name": "Крылья куриные сырые",
+            "shop": "Корона",
+             "address": "Игуменский тракт",
+             "price_of_unit": 4.5}],
 
-    {"name": "Яйца куриные С-2",
-     "address": "Виталюр Держинского пр-т",
-     "price": "2,8р"},
+    "eggs":[{"name": "Яйца куриные С-2",
+             "address": "Держинского пр-т",
+             "shop": "Виталюр",
+             "price_of_unit": 2.8},
 
-    {"name": "Сахар",
-     "address": "Санта пр-т Независимости",
-     "price": "1,9р"},
+             {"name": "ВТорые серые Яйца",
+             "address": "Держинского пр-т",
+             "shop": " new Виталюр",
+             "price_of_unit": 2.8}],
 
-    {"name": "Хлеб кирпичик",
-     "address": "Виталюр Малиновка",
-     "price": "1,2р"}
-]
+    "sugar":[{"name": "Сахар",
+             "address": "пр-т Независимости",
+             "shop": "Санта",
+             "price_of_unit": 1.9}],
+
+    "bread":[{"name": "Хлеб кирпичик",
+             "address": "Малиновка",
+             "shop":"Vitalur",
+             "price_of_unit": 1.2}]
+    }
+
+url_data_products = "products/products_one_key.json"
