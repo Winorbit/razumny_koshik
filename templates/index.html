@@ -21,9 +21,9 @@
                     <div class="col">
                         <select class="form-select" name="category" id="control-group${id}">
                             <option selected>Выберите продукт</option>
-                            <option value="meat">Мясо</option>
-                            <option value="cheese">Сыр</option>
-                            <option value="eggs">Яйца</option>
+                        {% for item in product_category %}
+                            <option value= {{item}}>{{product_category[item]}}</option>
+                        {% endfor %}
                         </select>
                     </div>
                     <div class="col">
@@ -89,9 +89,9 @@
                 <div class="col">
                     <select class="form-select"  name="category" id="control-group1">
                         <option selected>Выберите продукт</option>
-                        <option value="meat">Мясо</option>
-                        <option value="cheese">Сыр</option>
-                        <option value="eggs">Яйца</option>
+                        {% for item in product_category %}
+                            <option value= {{item}}>{{product_category[item]}}</option>
+                        {% endfor %}
                     </select>
                 </div>
 

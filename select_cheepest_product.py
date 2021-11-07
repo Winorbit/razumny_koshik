@@ -12,7 +12,7 @@ def select_cheepest_product(products):
 	cheepest_product = [i for i in products if i.get("price_of_unit") == min_price]
 	return cheepest_product
 
-def select_all_cheepest_product_by_categiries(categories):
+def select_all_cheepest_product_by_categories(categories):
 	f = open(url_data_products)
 	data = json.load(f)
 	products = data.get("products") 
@@ -25,6 +25,7 @@ def select_all_cheepest_product_by_categiries(categories):
 		all_cheepest_products[category] = cheepest_products_in_category
 	return all_cheepest_products
 
-
+"""
 categories = ["meat_raw_pork", "eggs", "cheese"]
 print(select_all_cheepest_product_by_categiries(categories))
+"""

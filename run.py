@@ -1,6 +1,6 @@
 import os
 from flask import Flask, render_template, request, send_from_directory
-from settings import products
+from settings import product_category, products
 
 app = Flask(__name__, template_folder="templates")
 
@@ -24,7 +24,7 @@ def show_pages():
         print(user_input)  # for testing result
         return render_template('result.html', products=products)
     else:
-        return render_template('index.html')
+        return render_template('index.html', product_category=product_category)
 
 
 @app.route('/favicon')

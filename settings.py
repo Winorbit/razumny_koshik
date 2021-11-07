@@ -26,3 +26,11 @@ products = {
     }
 
 url_data_products = "products/products_one_key.json"
+
+product_category = {"meat_raw_pork": "Мясо сырое.Свинина",
+                    "meat_raw_beaf": "Мясо сырое.Говядина",
+                    "meat_raw_bird": "Мясо сырое. Птица",
+                    "meat_sausages": "Мясо. Колбасно-сосисочные изделия",
+                    "eggs":"Яйца",
+                    "сheese":"Сыр"                    
+                    }
