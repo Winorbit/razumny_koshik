@@ -14,7 +14,7 @@ def select_cheepest_product(products):
 	return cheepest_product
 
 def select_all_cheepest_product_by_categories(categories):
-	f = open(url_data_products)
+	f = open(url_data_products, encoding='utf-8')
 	data = json.load(f)
 	products = data.get("products") 
 	f.close()
