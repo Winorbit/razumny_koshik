@@ -14,24 +14,30 @@
             <div class="d-flex justify-content-around mb-5">
                 <h4>Результат расчета</h4>
             </div>
-            {% for  product in products %}
+            {% for  i in products %}
+                {% for j in products[i]%}
+                    {% if products[i].index(j)==0 %}
 
-            <div class=" mb-3 row ">
-                <div class="col col-lg-4">
-                    {{product.name}}
-                </div>
+                        <div class=" mb-3 row ">
+                    {% else %}
+                        <div class=" mb-3 row text-secondary opacity-50">
+                    {% endif %}
+                            <div class="col col-lg-4">
+                                {{j.name}}
+                            </div>
 
-                <div class="col col-lg-5">
-                    {{product.address}}
-                </div>
+                            <div class="col col-lg-5">
+                                {{j.shop_name}} {{j.address}}
+                            </div>
 
-                <div class="col col-lg-2">
-                    {{product.price}}
-                </div>
-                <div class="col col-lg-1">
-                    -
-                </div>
-            </div>
+                            <div class="col col-lg-2">
+                                {{j.price_of_unit}} р.
+                            </div>
+                            <div class="col col-lg-1">
+                                -
+                            </div>
+                        </div>
+                {% endfor %}
             {% endfor %}
 
            
