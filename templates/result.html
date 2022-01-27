@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <link rel="icon" href="/favicon.ico" >
+    <link rel="icon" href="/favicon" >
     <title>Разумны кошык</title>
 
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
@@ -14,24 +14,30 @@
             <div class="d-flex justify-content-around mb-5">
                 <h4>Результат расчета</h4>
             </div>
-            {% for  product in products %}
+            {% for  i in products %}
+                {% for j in products[i]%}
+                    {% if products[i].index(j)==0 %}
 
-            <div class=" mb-3 row ">
-                <div class="col col-lg-4">
-                    {{product.name}}
-                </div>
+                        <div class=" mb-3 row ">
+                    {% else %}
+                        <div class=" mb-3 row text-secondary opacity-50">
+                    {% endif %}
+                            <div class="col col-lg-4">
+                                {{j.name}}
+                            </div>
 
-                <div class="col col-lg-5">
-                    {{product.address}}
-                </div>
+                            <div class="col col-lg-5">
+                                {{j.shop_name}} {{j.address}}
+                            </div>
 
-                <div class="col col-lg-2">
-                    {{product.price}}
-                </div>
-                <div class="col col-lg-1">
-                    -
-                </div>
-            </div>
+                            <div class="col col-lg-2">
+                                {{j.price_of_unit}} р.
+                            </div>
+                            <div class="col col-lg-1">
+                                -
+                            </div>
+                        </div>
+                {% endfor %}
             {% endfor %}
 
            
@@ -58,7 +64,7 @@
         </div>
 
         <div>
-            <img class="img-fluid" src="../static/map.png" alt="карта">
+            <img class="img-fluid" src="/map" alt="карта">
         </div>
     </div>
 </body>
