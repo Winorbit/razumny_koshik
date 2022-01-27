@@ -1,12 +1,6 @@
 import json
 from settings import url_data_products
 
-"""
-f = open("products/products_one_key.json")
-data=json.load(f)
-f.close()
-"""
-
 def select_cheepest_product(products):
 	print(products)
 	min_price = min(i.get("price_of_unit") for i in products)
@@ -27,7 +21,3 @@ def select_all_cheepest_product_by_categories(categories):
 		all_cheepest_products[category] = cheepest_products_in_category
 	return all_cheepest_products
 
-"""
-categories = ["cheese"]
-print(select_all_cheepest_product_by_categories(categories))
-"""

@@ -22,7 +22,6 @@ def take_user_input(page):
 def show_pages():
     if request.method == 'POST':
         user_input = take_user_input(request)
-        print(user_input["categories"])  # for testing result
         products = select_all_cheepest_product_by_categories(user_input["categories"])
         return render_template('result.html', products=products)
     else:
