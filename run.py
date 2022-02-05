@@ -24,7 +24,10 @@ def show_pages():
         user_input = take_user_input(request)
         products = select_all_cheepest_product_by_categories(user_input["categories"])
         total_price = get_total_price(products)
-        return render_template('result.html', products=products, total_price = total_price)
+        total={"total_price": total_price,
+                "difference": total_price - float(user_input["money"])}
+
+        return render_template('result.html', products=products, total = total)
     else:
         return render_template('index.html', product_category=product_category)
 
