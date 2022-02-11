@@ -1,7 +1,7 @@
 import os
 from flask import Flask, render_template, request, send_from_directory
 from settings import product_category, products
-from select_cheepest_product import select_all_cheepest_product_by_categories
+from select_cheepest_product import select_all_cheepest_product_by_categories, get_total_price
 
 app = Flask(__name__, template_folder="templates")
 
@@ -23,7 +23,11 @@ def show_pages():
     if request.method == 'POST':
         user_input = take_user_input(request)
         products = select_all_cheepest_product_by_categories(user_input["categories"])
-        return render_template('result.html', products=products)
+        total_price = get_total_price(products)
+        total={"total_price": total_price,
+                "difference": total_price - float(user_input["money"])}
+
+        return render_template('result.html', products=products, total = total)
     else:
         return render_template('index.html', product_category=product_category)
 

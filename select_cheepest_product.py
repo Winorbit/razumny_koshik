@@ -21,3 +21,11 @@ def select_all_cheepest_product_by_categories(categories):
 		all_cheepest_products[category] = cheepest_products_in_category
 	return all_cheepest_products
 
+def get_total_price(all_cheepest_products):
+	total_price = 0
+	for  i in all_cheepest_products:
+            for j in all_cheepest_products[i]:
+            	print(j)
+            	if all_cheepest_products[i].index(j)==0:
+                	total_price += j["price_of_unit"]
+	return total_price
